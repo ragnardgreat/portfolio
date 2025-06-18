@@ -1,24 +1,74 @@
-import logo from './logo.svg';
 import './App.css';
+import AboutMe from './Components/AboutMe';
+import Skills from './Components/Skills';
+import Projects from './Components/Projects';
+import Navbar from './Components/Navbar';
+import LandingPage from './Components/LandingPage';
+import Contact from './Components/Contact';
 
 function App() {
+
+  window.addEventListener("scroll", () => {
+
+    if (window.outerWidth < 992) {
+      console.log(window.outerWidth)
+      if (window.scrollY >= 0) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.transition = ".8s ease"
+      }
+      if (window.scrollY >= 200) {
+        document.body.style.backgroundColor = "rgb(43, 43, 43)";
+        document.body.style.transition = ".8s ease"
+      }
+      if (window.scrollY >= 4400) {
+        document.body.style.backgroundColor = "rgb(255, 255, 255)"
+      }
+      if (window.scrollY >= 7500) {
+        document.body.style.backgroundColor = "rgb(43, 43, 43)"
+      }
+      if (window.scrollY >= 10000) {
+        document.body.style.backgroundColor = "rgb(0, 0, 0)"
+      }
+    }
+    else {
+      if (window.scrollY >= 0) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.transition = ".8s ease"
+      }
+      if (window.scrollY >= 700) {
+        document.body.style.backgroundColor = "rgb(43, 43, 43)";
+        document.body.style.transition = ".8s ease"
+      }
+      if (window.scrollY >= 1600) {
+        document.body.style.backgroundColor = "rgb(255, 255, 255)"
+      }
+      if (window.scrollY >= 4000) {
+        document.body.style.backgroundColor = "rgb(43, 43, 43)"
+      }
+      if (window.scrollY >= 5500) {
+        document.body.style.backgroundColor = "rgb(0, 0, 0)"
+      }
+    }
+
+
+
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital@0;1&display=swap');
+      </style>
+      <div id="homePageContainer">
+        <LandingPage />
+        <Navbar />
+        <AboutMe />
+        <Projects />
+        <Skills /><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <Contact />
+      </div>
+    </>
   );
 }
 

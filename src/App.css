@@ -1,38 +1,948 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width:990px) {
+  body {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    background-color: white;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: rgb(0, 0, 0);
+    max-width: 80%;
+    margin: auto
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width:992px) {
+
+  html,
+  body {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0px;
+    overflow-x: visible;
+  }
+
+  #frontend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 55px;
+
+  }
+
+  #skillsContainer {
+    position: relative;
+    padding-top: 200px;
+    text-align: center;
+    left: 100px;
+    margin: auto;
+    padding-bottom: 100px;
+    margin-bottom: 200px;
+  }
+
+  #landingPageContainer {
+    display: flex;
+    margin: auto;
+    text-align: center;
+  }
+
+  #aboutMeContainer {
+    padding: 0px;
+    font-size: 25px;
+  }
+
+  #aboutMeContainer {
+    padding: 0px;
+    margin: auto;
+  }
+
+  #outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 20px 20px black;
+  }
+
+  #projectsContainer {
+    background-attachment: scroll;
+    margin: auto;
+    position: relative;
+    left: 55px;
+  }
+
+  #realStoreContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 20px 20px black;
+  }
+
+  #contWithPictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px
+  }
+
+  #realPicturesMobile {
+    display: block;
+  }
+
+  #realPictures {
+    display: none;
+  }
+
+  #pics {
+    width: 80%;
+  }
+
+  #myPic {
+    display: none;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    border: 5px solid rgb(255, 255, 255);
+    object-fit: cover;
+  }
+
+  #myPicMobile {
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    border: 5px solid rgb(255, 255, 255);
+    object-fit: cover;
+  }
+
+  #prev,
+  #next {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s;
+    border: none;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+
+  #next {
+    top: 50%;
+    left: -50px;
+  }
+
+  #prev {
+    top: 50%;
+    right: -50px;
+  }
+
+  .pictures {
+    position: relative;
+    margin: auto;
+    align-items: center;
+    height: 40vh;
+  }
+
+  .pictures img {
+    position: relative;
+    width: 100vw;
+    border-radius: 20px;
+    border: 5px solid black;
+  }
+
+  #fullLogo {
+    display: flex;
+    position: relative;
+  }
+
+
+  #SCL {
+    position: relative;
+    margin-left: -20px;
+    font-size: 10px;
+    flex-direction: column;
+  }
+
+  #SCL h2 {
+    font-size: 20px;
+  }
+
+  #SCL h1 {
+    margin: auto;
+  }
+
+  .description {
+    position: relative;
+    opacity: 0;
+    margin: auto;
+    width: 90%;
+    font-size: 30px;
+    left: -20px;
+    animation: test linear forwards;
+    animation-timeline: view(5% 25%);
+    animation-range: entry 0;
+  }
+
+
+  #email h1 {
+    font-size: 45px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+hr {
+  border: 3px solid rgb(82, 82, 82);
+}
+
+.title {
+  font-weight: normal;
+  font-size: 100px;
+  margin-left: 60px;
+  text-align: left;
+  width: 100%;
+  float: left;
+  color: rgb(43, 43, 43);
+  ;
+}
+
+.gitHubBtn {
+  font-family: monospace;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10%;
+  font-size: 40px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.gitHubBtn:hover {
+  transform: scale(1.1)
+}
+
+@keyframes test {
+  0% {
+    opacity: 0;
+    transform: translatex(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(20px);
+  }
+}
+
+@keyframes skillsAnim {
+  0% {
+    opacity: 0;
+    transform: translatey(200px);
+  }
+
+
+  90% {
+    transform: translatey(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatey(20px);
+  }
+}
+
+/*Homepage*/
+
+#landingPageContainer {
+  position: relative;
+  margin-top: 50px;
+  width: 60vw;
+  height: 90vh;
+  font-size: 100px;
+  text-align: left;
+  display: flex;
+}
+
+#nameDesc {
+  position: relative;
+  padding: 0px;
+  top: 30%;
+  float: left;
+}
+
+#myDesc {
+  font-size: 40px;
+}
+
+
+#navbar {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  float: left;
+  background-color: black;
+  font-size: 50px;
+  z-index: 2;
+}
+
+#homePageContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/*About me*/
+#aboutMeContainer {
+  padding: 100px;
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+#aboutMeContainer h1 {
+  color: white
+}
+
+#love {
+  color: rgb(255, 99, 99)
+}
+
+#fullStack {
+  color: rgb(8, 156, 255);
+}
+
+#selfTaught {
+  color: greenyellow
+}
+
+#aboutMeContainer h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#aboutMeContainer h2 {
+  width: 100%;
+}
+
+
+@media (min-width:990px) {
+  #myPic {
+    border-radius: 50%;
+    position: relative;
+    top: 300px;
+    left: 150px;
+    border: 5px solid rgb(255, 255, 255);
+    object-fit: cover;
+  }
+
+  #myPicMobile {
+    display: none;
+  }
+}
+
+#aboutMeImg {
+  display: flex;
+}
+
+/*--------*/
+
+/*Skills*/
+
+@media (min-width:990px) {
+  #skillsContainer {
+    padding-top: 200px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding-bottom: 100px;
+    margin-bottom: 200px;
+  }
+}
+
+
+
+.images {
+  opacity: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: skillsAnim linear forwards;
+  animation-timeline: view(70% 5%);
+  animation-range: entry 0;
+
+}
+
+.images img {
+  margin: 10px;
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+  border-radius: 10%;
+  padding: 10px;
+  background-color: rgb(170, 170, 170);
+  z-index: 2;
+  position: relative;
+  transition: .6s;
+  bottom: 0%;
+}
+
+.images img:hover {
+  background-color: rgb(221, 221, 221);
+  bottom: 10%;
+}
+
+p {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  opacity: 100;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+#skillsTitle {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*------*/
+
+/*Projects*/
+
+.video {
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.description {
+  position: relative;
+  opacity: 0;
+  margin: auto;
+  width: 90%;
+  font-size: 30px;
+  animation: test linear forwards;
+  animation-timeline: view(5% 25%);
+  animation-range: entry 0;
+}
+
+#projectsContainer {
+  background-attachment: scroll;
+  text-align: center;
+}
+
+#outerContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(99, 1, 99);
+  box-shadow: 20px 20px black;
+  padding: 50px;
+  border-radius: 20px;
+  z-index: 0;
+  transition: .3s;
+  margin-bottom: 40px;
+}
+
+#contWithPictures {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 60px
+}
+
+
+#logoTextContainer {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pictures {
+  position: relative;
+  margin: auto;
+  align-items: center;
+  height: 40vh;
+}
+
+.pictures img {
+  width: 40vw;
+  border-radius: 20px;
+}
+
+
+#fullLogo {
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+
+@media only screen and (max-width:992px) {
+  #fullLogo {
+    display: flex;
+    position: relative;
+    top: -30px;
+    margin: auto;
+    justify-content: center;
+  }
+}
+
+#SCL h2 {
+  position: relative;
+  left: 20px;
+}
+
+#logoContainer {
+  width: 120px;
+  position: relative;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  animation-name: anim;
+  animation-delay: 0s, 2s;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+  left: 50%;
+}
+
+#newLogo {
+  background-color: pink;
+  border-radius: 50%;
+  font-size: 100px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+#textContainer {
+  font-size: 100px;
+  position: relative;
+  opacity: 0%;
+  animation-name: textAnim;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  z-index: -1;
+  animation-play-state: paused;
+}
+
+#newLogoText {
+  font-weight: bold;
+}
+
+
+@keyframes spinOut {
+  0% {
+    transform: rotate(-405deg);
+  }
+
+  100% {
     transform: rotate(0deg);
   }
+}
+
+@keyframes textAnim {
+  0% {
+    left: -20px;
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  100% {
+    left: 30px;
+    opacity: 100%;
+  }
+
+}
+
+@keyframes anim {
+  0% {
+    left: 30%;
+    transform: rotate(0deg);
+  }
+
+  40% {
+    left: 30%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    left: 10%;
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(-45deg);
+  }
+
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(-405deg);
+  }
+}
+
+#realStoreContainer {
+  margin: auto;
+  position: relative;
+  display: flex;
+  padding: 20px;
+  width: 70%;
+  height: 40vh;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  background-color: rgb(206, 110, 1);
+  z-index: 0;
+  padding: 50px;
+  box-shadow: -20px 20px black;
+}
+
+
+#logoImg {
+  right: 20px;
+  opacity: 0%;
+  position: relative;
+  animation: realAnim 1s forwards;
+  animation-delay: .5s;
+  z-index: 1;
+  animation-play-state: paused;
+}
+
+
+#realStoreContainer span {
+  opacity: 0%;
+  font-weight: bold;
+  position: relative;
+  top: -20px;
+  color: rgb(255, 255, 255);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  animation: realTextAnim 1s forwards;
+  animation-delay: .5s;
+  animation-play-state: paused;
+}
+
+#realLogo {
+  width: 250px;
+  font-size: 50px;
+  position: relative;
+  right: 20px;
+}
+
+#logoContainerReal {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+#realDesc {
+  margin: auto;
+}
+
+#realDesc h2 {
+  margin: auto;
+}
+
+#realDesc h1 {
+  position: relative;
+  left: -20px;
+  margin: auto;
+  padding: 0px;
+}
+
+@media (min-width:990px) {
+
+  #realPicturesMobile {
+    display: none;
+
+  }
+}
+
+
+
+
+#realPictures button {
+  background-color: black;
+  color: white;
+}
+
+#realPicturesMobile button {
+  background-color: black;
+  color: white;
+}
+
+@keyframes realAnim {
+  0% {
+    opacity: 0%;
+    left: -60px;
+  }
+
+  100% {
+    opacity: 100%;
+    left: 0px;
+  }
+}
+
+@keyframes realTextAnim {
+  0% {
+    opacity: 0%;
+    color: white;
+    right: 100px;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    opacity: 100%;
+    color: orange;
+    right: 0px;
+  }
+}
+
+#cookieContainer {
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(0, 85, 124);
+  box-shadow: 20px 20px black;
+  display: flex;
+}
+
+#c15,
+#c25,
+#c35 {
+  position: relative;
+  color: white;
+  opacity: 0%;
+  animation: cookieTextAnim 1s ease forwards;
+  animation-delay: 2s;
+  animation-play-state: paused;
+}
+
+#cookieTitle {
+  margin: auto;
+  font-size: 50px;
+  color: white;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+  position: relative;
+  width: min-content;
+
+}
+
+#logoPlayButton {
+  width: 600px;
+  margin: auto;
+}
+
+
+#c1,
+#c2,
+#c3 {
+  opacity: 100%;
+  color: rgb(0, 174, 255);
+  position: relative;
+  left: 40%;
+}
+
+#c1 {
+  animation: cookieAnim 3s ease forwards;
+  animation-play-state: paused;
+}
+
+#c2 {
+  animation: cookieAnim 2s ease forwards;
+  animation-delay: .5s;
+  animation-play-state: paused;
+}
+
+#c3 {
+  animation: cookieAnim 1s ease forwards;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+#playButton {
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 119, 255, 0.815);
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: .5s;
+  border: none;
+}
+
+#playButton:hover {
+  background-color: rgba(0, 87, 187, 0.815);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 5px solid white;
+}
+
+#cookieDesc {
+  margin: auto
+}
+
+#cookieLogoContainer {
+  margin: auto;
+}
+
+@keyframes cookieAnim {
+  0% {
+    left: 40%;
+  }
+
+  100% {
+    left: 0%
+  }
+}
+
+@keyframes cookieTextAnim {
+  0% {
+    opacity: 0%;
+    left: 60px;
+  }
+
+  100% {
+    opacity: 100%;
+    left: 0px;
+  }
+}
+
+
+/*Slideshow*/
+
+.text {
+  color: #000000;
+  position: relative;
+  font-size: 30px;
+  padding: 8px 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  position: relative;
+  bottom: 270px;
+  gap: 470px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  opacity: 0%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  margin: auto;
+  cursor: pointer;
+  font-size: 30px;
+  transition: .5s;
+  border: none;
+  border-radius: 20px;
+}
+
+.pictures:hover .button {
+  opacity: 100%;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+/*Contact*/
+#contactContainer {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+#contactTitle {
+  color: white;
+  margin: auto;
+}
+
+.contact {
+  font-size: 100px;
+  position: relative;
+  padding: 0px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+#gitHub img {
+  background-color: white;
+  border-radius: 50%;
+}
+
+#contactContainer button {
+  background-color: rgb(58, 58, 58);
+  margin-top: 5%;
+  padding: 0;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  border: 3px solid black;
+  transform: .5s;
+}
+
+#githubButton {
+  margin-bottom: 5%;
+}
+
+#contactContainer button:hover {
+  border: 3px solid white;
+}
+
+@media (min-width:990px) {
+  #email h1 {
+    font-size: 70px;
   }
 }
