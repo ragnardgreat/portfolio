@@ -55,7 +55,7 @@ export default function SCL() {
                     </div>
                 </div>
                 <div id="SCL">
-                    <h2>Built with:<br></br>
+                    <h2 id="builtWith">Built with:
                         JavaScript <img width="20px" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"></img>,
                         React <img alt="image4" width="20px" src="https://icon.icepanel.io/Technology/svg/React.svg"></img>,
                         Node.js <img width="20px" alt="image5" src="https://nodejs.org/static/logos/jsIconGreen.svg"></img>,
@@ -65,7 +65,7 @@ export default function SCL() {
                         and you can see everybody elses posts</h1>
                 </div>
             </div>
-            <div className="pictures"><ImageDisplay id="pics" imgArr={imgArr} descArr={descArr} /></div>
+            <div className="pictures"><ImageDisplay imgArr={imgArr} descArr={descArr} /></div>
         </div>
     </>)
 }

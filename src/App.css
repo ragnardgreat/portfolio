@@ -1,6 +1,7 @@
 @media (min-width:990px) {
   body {
     color: white;
+    background-color: black;
     font-family: "Quicksand", sans-serif;
     background-color: white;
     font-optical-sizing: auto;
@@ -11,7 +12,7 @@
   }
 }
 
-@media (max-width:992px) {
+@media screen and (max-width:992px) {
 
   html,
   body {
@@ -19,68 +20,95 @@
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     width: 100%;
-    height: 100%;
-    margin: auto;
+    margin: 0px;
     padding: 0px;
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 
-  #frontend {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+  .title {
+    font-weight: normal;
+    margin: 0px;
     position: relative;
-    left: 55px;
-
+    padding: 0px;
+    font-size: 80px;
+    margin-left: 60px;
+    width: 100%;
+    color: rgb(43, 43, 43);
   }
 
-  #skillsContainer {
+  #projectsTitle {
+    font-weight: normal;
+    margin: 0px;
     position: relative;
-    padding-top: 200px;
-    text-align: center;
-    left: 100px;
+    left: -80px;
+    padding: 0px;
+    font-size: 80px;
+    margin-left: 60px;
+    width: 100%;
+    color: rgb(43, 43, 43);
+  }
+
+  body {
+    background-color: black;
+  }
+
+  #nameDesc {
+    position: relative;
+    padding: 0px;
     margin: auto;
-    padding-bottom: 100px;
-    margin-bottom: 200px;
+  }
+
+  #homePageContainer {
+    margin: 0px;
+    padding: 0px;
   }
 
   #landingPageContainer {
     display: flex;
-    margin: auto;
     text-align: center;
   }
 
   #aboutMeContainer {
+    position: relative;
+    margin: 0px;
     padding: 0px;
-    font-size: 25px;
+    font-size: 15px;
   }
 
-  #aboutMeContainer {
-    padding: 0px;
-    margin: auto;
-  }
-
-  #outerContainer {
+  #skillsContainer {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
     margin: auto;
+  }
+
+  #skillsTitle {
+    margin: 0px;
+  }
+
+
+  #outerContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
     margin-top: 50px;
-    padding: 20px;
     border-radius: 20px;
-    box-shadow: 20px 20px black;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(99, 1, 99);
+    padding: 70px;
+    border-radius: 20px;
+    z-index: 0;
+    transition: .3s;
+    margin-bottom: 40px;
   }
 
   #projectsContainer {
     background-attachment: scroll;
     margin: auto;
     position: relative;
-    left: 55px;
   }
 
   #realStoreContainer {
@@ -88,13 +116,49 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 50%;
+    box-shadow: none;
     margin: auto;
     margin-top: 50px;
-    padding: 20px;
     border-radius: 20px;
-    box-shadow: 20px 20px black;
+    position: relative;
+    width: 70%;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    background-color: rgb(206, 110, 1);
+    z-index: 0;
+    padding: 50px;
+
   }
+
+  #cookieContainer {
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(0, 85, 124);
+    display: flex;
+  }
+
+  #cookieLogoContainer {
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  #cookieTitle {
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+  }
+
+  #cookieLogoContainer {
+    flex-direction: column;
+    position: relative;
+    left: 10px;
+}
 
   #contWithPictures {
     display: flex;
@@ -112,7 +176,7 @@
   }
 
   #pics {
-    width: 80%;
+    width: 70%;
   }
 
   #myPic {
@@ -126,10 +190,21 @@
 
   #myPicMobile {
     border-radius: 50%;
-    margin: auto;
     position: relative;
     border: 5px solid rgb(255, 255, 255);
     object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .button {
+    position: relative;
+    top: -150px;
+  }
+
+
+  #buttons {
+    display: flex;
+    flex-direction: row;
   }
 
   #prev,
@@ -145,28 +220,19 @@
     border: none;
     border-radius: 20px;
     font-size: 10px;
+    display: flex;
   }
 
-  #next {
-    top: 50%;
-    left: -50px;
-  }
 
-  #prev {
-    top: 50%;
-    right: -50px;
-  }
 
-  .pictures {
+  #pics {
+    box-sizing: border-box;
     position: relative;
-    margin: auto;
-    align-items: center;
-    height: 40vh;
+    width: 100%;
   }
 
   .pictures img {
-    position: relative;
-    width: 100vw;
+    justify-content: center;
     border-radius: 20px;
     border: 5px solid black;
   }
@@ -174,31 +240,36 @@
   #fullLogo {
     display: flex;
     position: relative;
+    left: -3%;
   }
 
 
   #SCL {
     position: relative;
-    margin-left: -20px;
     font-size: 10px;
     flex-direction: column;
+    width: 100%;
+
   }
 
   #SCL h2 {
+    position: relative;
+    left: 20px;
     font-size: 20px;
   }
 
   #SCL h1 {
+    position: relative;
+    left: -20px;
     margin: auto;
   }
 
   .description {
     position: relative;
-    opacity: 0;
+    opacity: 1;
     margin: auto;
     width: 90%;
     font-size: 30px;
-    left: -20px;
     animation: test linear forwards;
     animation-timeline: view(5% 25%);
     animation-range: entry 0;
@@ -206,8 +277,29 @@
 
 
   #email h1 {
-    font-size: 45px;
+    font-size: 25px;
   }
+
+
+  #contactContainer {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  #contactTitle {
+    position: relative;
+    color: white;
+    left: -50px;
+  }
+
+  .contact {
+    font-size: 50px;
+    position: relative;
+    padding: 0px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
 }
 
 html {
@@ -218,16 +310,19 @@ hr {
   border: 3px solid rgb(82, 82, 82);
 }
 
-.title {
-  font-weight: normal;
-  font-size: 100px;
-  margin-left: 60px;
-  text-align: left;
-  width: 100%;
-  float: left;
-  color: rgb(43, 43, 43);
-  ;
+@media (min-width:990px) {
+  .title {
+    font-weight: normal;
+    font-size: 100px;
+    margin-left: 60px;
+    text-align: left;
+    width: 100%;
+    float: left;
+    color: rgb(43, 43, 43);
+  }
+
 }
+
 
 .gitHubBtn {
   font-family: monospace;
@@ -258,6 +353,7 @@ hr {
   }
 }
 
+
 @keyframes skillsAnim {
   0% {
     opacity: 0;
@@ -287,12 +383,15 @@ hr {
   display: flex;
 }
 
-#nameDesc {
-  position: relative;
-  padding: 0px;
-  top: 30%;
-  float: left;
+@media (min-width:990px) {
+  #nameDesc {
+    position: relative;
+    padding: 0px;
+    top: 30%;
+    float: left;
+  }
 }
+
 
 #myDesc {
   font-size: 40px;
@@ -311,16 +410,15 @@ hr {
   z-index: 2;
 }
 
-#homePageContainer {
-  display: flex;
-  flex-direction: column;
-}
+
 
 /*About me*/
-#aboutMeContainer {
-  padding: 100px;
-  width: 50%;
-  margin-bottom: 100px;
+@media (min-width:990px) {
+  #aboutMeContainer {
+    padding: 100px;
+    width: 50%;
+    margin-bottom: 100px;
+  }
 }
 
 #aboutMeContainer h1 {
@@ -439,35 +537,41 @@ p {
   font-size: 50px;
 }
 
-.description {
-  position: relative;
-  opacity: 0;
-  margin: auto;
-  width: 90%;
-  font-size: 30px;
-  animation: test linear forwards;
-  animation-timeline: view(5% 25%);
-  animation-range: entry 0;
+@media (min-width:990px) {
+  .description {
+    position: relative;
+    opacity: 0;
+    margin: auto;
+    width: 90%;
+    font-size: 30px;
+    animation: test linear forwards;
+    animation-timeline: view(5% 25%);
+    animation-range: entry 0;
+  }
 }
+
 
 #projectsContainer {
   background-attachment: scroll;
   text-align: center;
 }
 
-#outerContainer {
-  display: flex;
-  position: relative;
-  align-items: center;
-  margin: auto;
-  background-color: rgb(99, 1, 99);
-  box-shadow: 20px 20px black;
-  padding: 50px;
-  border-radius: 20px;
-  z-index: 0;
-  transition: .3s;
-  margin-bottom: 40px;
+@media (min-width:990px) {
+  #outerContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(99, 1, 99);
+    box-shadow: 20px 20px black;
+    padding: 50px;
+    border-radius: 20px;
+    z-index: 0;
+    transition: .3s;
+    margin-bottom: 40px;
+  }
 }
+
 
 #contWithPictures {
   display: flex;
@@ -483,17 +587,20 @@ p {
   flex-direction: column;
 }
 
-.pictures {
-  position: relative;
-  margin: auto;
-  align-items: center;
-  height: 40vh;
+@media (min-width:990px) {
+  .pictures {
+    position: relative;
+    margin: auto;
+    align-items: center;
+    height: 40vh;
+  }
+
+  .pictures img {
+    width: 40vw;
+    border-radius: 20px;
+  }
 }
 
-.pictures img {
-  width: 40vw;
-  border-radius: 20px;
-}
 
 
 #fullLogo {
@@ -515,8 +622,9 @@ p {
 
 #SCL h2 {
   position: relative;
-  left: 20px;
+  left: 10px;
 }
+
 
 #logoContainer {
   width: 120px;
@@ -614,21 +722,24 @@ p {
   }
 }
 
-#realStoreContainer {
-  margin: auto;
-  position: relative;
-  display: flex;
-  padding: 20px;
-  width: 70%;
-  height: 40vh;
-  border-radius: 20px;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  background-color: rgb(206, 110, 1);
-  z-index: 0;
-  padding: 50px;
-  box-shadow: -20px 20px black;
+@media only screen and (min-width:992px) {
+  #realStoreContainer {
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    width: 70%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    background-color: rgb(206, 110, 1);
+    z-index: 0;
+    padding: 50px;
+    box-shadow: -20px 20px black;
+  }
 }
+
 
 
 #logoImg {
@@ -735,19 +846,22 @@ p {
   }
 }
 
-#cookieContainer {
-  justify-content: center;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgb(0, 85, 124);
-  box-shadow: 20px 20px black;
-  display: flex;
+@media (min-width:990px) {
+  #cookieContainer {
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(0, 85, 124);
+    box-shadow: 20px 20px black;
+    display: flex;
+  }
 }
+
 
 #c15,
 #c25,
@@ -760,13 +874,15 @@ p {
   animation-play-state: paused;
 }
 
-#cookieTitle {
-  margin: auto;
-  font-size: 50px;
-  color: white;
-  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
-  position: relative;
-  width: min-content;
+@media (min-width:990px) {
+  #cookieTitle {
+    margin: auto;
+    font-size: 50px;
+    color: white;
+    text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+    position: relative;
+    width: min-content;
+  }
 
 }
 
@@ -864,56 +980,63 @@ p {
   text-align: center;
 }
 
-#buttons {
-  display: flex;
-  position: relative;
-  bottom: 270px;
-  gap: 470px;
-  flex-direction: row;
-  justify-content: center;
+
+@media (min-width:990px) {
+  #buttons {
+    display: flex;
+    position: relative;
+    bottom: 270px;
+    gap: 470px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .button {
+    opacity: 0%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .pictures:hover .button {
+    opacity: 100%;
+  }
+
+  .button:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
-.button {
-  opacity: 0%;
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  color: rgb(0, 0, 0);
-  padding: 20px;
-  margin: auto;
-  cursor: pointer;
-  font-size: 30px;
-  transition: .5s;
-  border: none;
-  border-radius: 20px;
-}
-
-.pictures:hover .button {
-  opacity: 100%;
-}
-
-.button:hover {
-  background-color: white;
-  color: black;
-}
 
 /*Contact*/
-#contactContainer {
-  margin: auto;
-  width: 100%;
-  margin-bottom: 10%;
-}
 
-#contactTitle {
-  color: white;
-  margin: auto;
-}
+@media (min-width:990px) {
+  #contactContainer {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 10%;
+  }
 
-.contact {
-  font-size: 100px;
-  position: relative;
-  padding: 0px;
-  width: fit-content;
-  cursor: pointer;
+  #contactTitle {
+    color: white;
+    margin: auto;
+  }
+
+  .contact {
+    font-size: 100px;
+    position: relative;
+    padding: 0px;
+    width: fit-content;
+    cursor: pointer;
+  }
 }
 
 #gitHub img {

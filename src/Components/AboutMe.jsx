@@ -26,6 +26,6 @@ export default function AboutMe() {
             </div>
             <img width="400px" height="400px" id="myPic" src="1000004869 (1).jpg"></img>
         </div>
-            <img width="400px" height="400px" id="myPicMobile" src="1000004869 (1).jpg"></img>
+        <img width="400px" height="400px" id="myPicMobile" src="1000004869 (1).jpg"></img>
     </>)
 }

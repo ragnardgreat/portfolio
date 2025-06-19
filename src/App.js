@@ -11,7 +11,6 @@ function App() {
   window.addEventListener("scroll", () => {
 
     if (window.outerWidth < 992) {
-      console.log(window.outerWidth)
       if (window.scrollY >= 0) {
         document.body.style.backgroundColor = "black";
         document.body.style.transition = ".8s ease"
@@ -20,10 +19,10 @@ function App() {
         document.body.style.backgroundColor = "rgb(43, 43, 43)";
         document.body.style.transition = ".8s ease"
       }
-      if (window.scrollY >= 4400) {
+      if (window.scrollY >= 2100) {
         document.body.style.backgroundColor = "rgb(255, 255, 255)"
       }
-      if (window.scrollY >= 7500) {
+      if (window.scrollY >= 5100) {
         document.body.style.backgroundColor = "rgb(43, 43, 43)"
       }
       if (window.scrollY >= 10000) {
@@ -65,7 +64,7 @@ function App() {
         <Navbar />
         <AboutMe />
         <Projects />
-        <Skills /><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <Skills id="skills" /><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Contact />
       </div>
     </>

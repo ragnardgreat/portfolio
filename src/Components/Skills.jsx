@@ -4,28 +4,31 @@ export default function Skills() {
 
     return (<>
 
-        <div id="frontend">
+        <div id="skillsContainer">
+
             <h1 id="skillsTitle" className="title">Skills</h1><br></br>
-            <h1>Front-End</h1>
-            <div className="images">
-                <div className="item"></div>
-                <div className="item">
-                    <img alt="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png" />
-                    <p className="skillName">Html</p>
-                </div>
-                <div className="item">
-                    <img alt="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"></img>
-                    <p>Css</p>
-                </div>
-                <div className="item">
-                    <img alt="image3" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"></img>
-                    <p>JavaScript</p>
-                </div>
-                <div className="item">
-                    <img alt="image4" src="https://icon.icepanel.io/Technology/svg/React.svg"></img>
-                    <p>React</p>
-                </div>
-            </div><br></br>
+            <div id="frontend">
+                <h1>Front-End</h1>
+                <div className="images">
+                    <div className="item"></div>
+                    <div className="item">
+                        <img alt="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png" />
+                        <p className="skillName">Html</p>
+                    </div>
+                    <div className="item">
+                        <img alt="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"></img>
+                        <p>Css</p>
+                    </div>
+                    <div className="item">
+                        <img alt="image3" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"></img>
+                        <p>JavaScript</p>
+                    </div>
+                    <div className="item">
+                        <img alt="image4" src="https://icon.icepanel.io/Technology/svg/React.svg"></img>
+                        <p>React</p>
+                    </div>
+                </div><br></br>
+            </div>
             <hr></hr>
             <div id="backend">
                 <h1>Back-End</h1>
@@ -63,7 +66,6 @@ export default function Skills() {
                 </div>
             </div>
         </div>
-
 
 
     </>)
