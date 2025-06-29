@@ -20,8 +20,8 @@ export default function Skills() {
                         <p>Css</p>
                     </div>
                     <div className="item">
-                        <img alt="image3" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"></img>
-                        <p>JavaScript</p>
+                        <img alt="image3" src="https://images.icon-icons.com/2415/PNG/512/typescript_original_logo_icon_146317.png"></img>
+                        <p>TypeScript</p>
                     </div>
                     <div className="item">
                         <img alt="image4" src="https://icon.icepanel.io/Technology/svg/React.svg"></img>
